@@ -70,7 +70,18 @@
       opacity: 0.85;
     }
 
-    /* Botão WhatsApp */
+    .erro {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #020617;
+      font-size: 13px;
+      padding: 10px;
+      text-align: center;
+    }
+
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -96,46 +107,61 @@
   <div class="autor">Criado por <strong>Everton Lima</strong></div>
 
   <h1>⚽ Wallpapers de Futebol</h1>
-  <p>Os melhores craques com frases motivacionais</p>
+  <p>Craques com frases motivacionais</p>
 
   <div class="galeria">
 
     <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg">
+      <img src="imagens/cr7.jpg" alt="Cristiano Ronaldo">
       <div class="frase">"Talento sem trabalho duro não é nada."</div>
       <div class="nome">– Cristiano Ronaldo</div>
     </div>
 
     <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Lionel_Messi_20180626.jpg">
+      <img src="imagens/messi.jpg" alt="Lionel Messi">
       <div class="frase">"Você tem que lutar para alcançar seus sonhos."</div>
       <div class="nome">– Lionel Messi</div>
     </div>
 
     <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Neymar_2018.jpg">
-      <div class="frase">"Ousadia, alegria e nunca desistir dos seus sonhos."</div>
+      <img src="imagens/neymar.jpg" alt="Neymar Jr">
+      <div class="frase">"Ousadia, alegria e nunca desistir."</div>
       <div class="nome">– Neymar Jr</div>
     </div>
 
     <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Kylian_Mbapp%C3%A9_2019.jpg">
+      <img src="imagens/mbappe.jpg" alt="Mbappé">
       <div class="frase">"Disciplina é o caminho para o sucesso."</div>
       <div class="nome">– Mbappé</div>
     </div>
 
   </div>
 
-  <p>Quer um wallpaper com a frase do seu ídolo?<br>
-     Chama no WhatsApp 👇</p>
+  <p>Quer um wallpaper do seu ídolo?<br>Chama no WhatsApp 👇</p>
 
-  <!-- WhatsApp -->
   <a 
-    href="https://wa.me/5575983654304?text=Quero%20wallpapers%20de%20futebol%20com%20frases" 
-    class="whatsapp" 
-    target="_blank">
-    💬
-  </a>
+    href="https://wa.me/5575983654304?text=Quero%20wallpapers%20de%20futebol%20com%20frases"
+    class="whatsapp"
+    target="_blank">💬</a>
+
+  <!-- SISTEMA DE CORREÇÃO DE IMAGENS -->
+  <script>
+    const fallback = 'https://via.placeholder.com/400x700/020617/ffffff?text=Wallpaper+indisponível';
+
+    document.querySelectorAll('img').forEach(img => {
+      img.onerror = function () {
+        this.style.display = 'none';
+
+        const erro = document.createElement('div');
+        erro.className = 'erro';
+        erro.innerText = 'Imagem temporariamente indisponível';
+
+        this.parentElement.appendChild(erro);
+        this.parentElement.style.backgroundImage = `url(${fallback})`;
+        this.parentElement.style.backgroundSize = 'cover';
+      };
+    });
+  </script>
 
 </body>
 </html>
