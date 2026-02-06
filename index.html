@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Everton Lima | Fotografia de Futebol</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallpapers de Futebol</title>
 
   <style>
     body {
@@ -12,61 +11,63 @@
       background: #0f172a;
       color: white;
       text-align: center;
-      padding: 30px;
     }
+
     h1 {
-      color: #22c55e;
-      font-size: 32px;
+      padding: 20px;
     }
-    h2 {
-      margin-top: 30px;
-      color: #e5e7eb;
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 15px;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .botao {
-      display: inline-block;
-      margin-top: 30px;
-      background: #22c55e;
-      color: black;
-      padding: 15px 30px;
-      text-decoration: none;
+
+    .galeria img {
+      width: 100%;
       border-radius: 10px;
-      font-weight: bold;
+    }
+
+    /* Botão WhatsApp */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      font-size: 26px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,.4);
+      z-index: 999;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Everton Lima</h1>
-  <p><strong>Fotografia Esportiva • Futebol</strong></p>
+  <h1>⚽ Wallpapers de Futebol</h1>
+  <p>Wallpapers em alta qualidade para celular</p>
 
-  <p>
-    Especializado em fotografia de futebol, registro momentos únicos dentro de campo,
-    captando emoção, intensidade e a história de cada jogo.
-  </p>
+  <div class="galeria">
+    <img src="https://picsum.photos/300/600?1">
+    <img src="https://picsum.photos/300/600?2">
+    <img src="https://picsum.photos/300/600?3">
+    <img src="https://picsum.photos/300/600?4">
+  </div>
 
-  <h2>📸 Serviços</h2>
-  <p>
-    • Cobertura de jogos e campeonatos<br>
-    • Fotos de atletas individuais<br>
-    • Times amadores e profissionais<br>
-    • Conteúdo para redes sociais
-  </p>
-
-  <h2>⚽ Diferenciais</h2>
-  <p>
-    ✔ Qualidade profissional<br>
-    ✔ Entrega rápida<br>
-    ✔ Valorização do atleta<br>
-    ✔ Olhar esportivo
-  </p>
-
-  <a class="botao" href="https://wa.me/5575983654304">
-  Falar comigo no WhatsApp
+  <!-- Botão WhatsApp -->
+  <a 
+    href="https://wa.me/5575983654304?text=Olá%20quero%20wallpapers%20de%20futebol" 
+    class="whatsapp" 
+    target="_blank">
+    💬
   </a>
 
 </body>
