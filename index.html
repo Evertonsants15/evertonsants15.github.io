@@ -1,136 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Everton Lima | Wallpapers de Futebol</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallpapers de Futebol</title>  <style>
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #050b1a, #02040a);
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #0a0f2c, #050816);
       color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
       text-align: center;
     }
 
-    .autor {
-      margin-top: 12px;
-      font-size: 14px;
-      opacity: 0.85;
-    }
-
     h1 {
-      margin: 10px 0 5px;
-      font-size: 22px;
+      margin-bottom: 30px;
+      font-size: 26px;
     }
 
-    p.sub {
-      font-size: 14px;
-      opacity: 0.9;
-      margin-bottom: 15px;
-    }
-
-    .galeria {
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 14px;
-      padding: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      position: relative;
-      height: 320px;
-      border-radius: 16px;
+      background: #0d1438;
+      border-radius: 15px;
       overflow: hidden;
-      background: #000;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     .card img {
       width: 100%;
-      height: 100%;
+      height: 320px;
       object-fit: cover;
-      filter: brightness(0.6);
+      display: block;
     }
 
-    .frase {
-      position: absolute;
-      bottom: 45px;
-      left: 10px;
-      right: 10px;
-      font-size: 14px;
-      font-weight: bold;
-      line-height: 1.4;
-    }
-
-    .nome {
-      position: absolute;
-      bottom: 15px;
-      right: 12px;
-      font-size: 12px;
-      opacity: 0.85;
-    }
-
-    .contato {
-      margin: 25px 0;
-      font-size: 14px;
-    }
-
-    .contato a {
-      color: #25d366;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="autor">Criado por <strong>Everton Lima</strong></div>
-
-  <h1>⚽ Wallpapers de Futebol</h1>
-  <p class="sub">Craques com frases motivacionais</p>
-
-  <div class="galeria">
-
-    <div class="card">
-      <img src="imagens/neymar.jpg"
-           alt="Neymar"
-           onerror="this.onerror=null;this.src='imagens/fallback.jpg';">
-      <div class="frase">“Ousadia e alegria.”</div>
-      <div class="nome">Neymar Jr</div>
-    </div>
-
-    <div class="card">
-      <img src="imagens/mbappe.jpg"
-           alt="Mbappé"
-           onerror="this.onerror=null;this.src='imagens/fallback.jpg';">
-      <div class="frase">“Sempre quero ir mais longe.”</div>
-      <div class="nome">Mbappé</div>
-    </div>
-
-    <div class="card">
-      <img src="imagens/messi.jpg"
-           alt="Messi"
-           onerror="this.onerror=null;this.src='imagens/fallback.jpg';">
-      <div class="frase">“O melhor nunca é suficiente.”</div>
-      <div class="nome">Messi</div>
-    </div>
-
-    <div class="card">
-      <img src="imagens/cr7.jpg"
-           alt="Cristiano Ronaldo"
-           onerror="this.onerror=null;this.src='imagens/fallback.jpg';">
-      <div class="frase">“Talento sem trabalho não é nada.”</div>
-      <div class="nome">CR7</div>
-    </div>
-
-  </div>
-
-  <div class="contato">
-    Quer um wallpaper do seu ídolo?<br>
-    👉 <a href="https://wa.me/5575983654304" target="_blank">Chama no WhatsApp</a>
-  </div>
-
-</body>
-</html>
+    .card p {
+      padding: 15px;
+      font-size: 15px;
+      line-height:
